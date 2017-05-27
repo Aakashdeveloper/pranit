@@ -1,0 +1,23 @@
+db.createCollection( "log",
+   { validator: { $and:
+      [
+         { capped: { $type: "bool" } },
+         { size: { $type: "int" } },
+         { max: { $type: "int" } }
+      ]
+   }
+} )
+
+
+db.createCollection( "contacts",
+   {
+      validator: { $or:
+         [
+            { phone: [{tel:{$type: "string"},mobile:{$type: "string"}  }] },
+            { email: { $regex: /@mongodb\.com$/ } },
+            { status: { $in: [ "Unknown", "Incomplete" ] } }
+         ]
+      },
+      validationAction: "warn"
+   }
+)
