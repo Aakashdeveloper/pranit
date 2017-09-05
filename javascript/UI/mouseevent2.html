@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First</title>
+	
+</head>
+<body>
+    <div style="background-color: yellow;height:200px;width:200px" onmouseover="mOver(this)" onmouseout="mOut(this)">Click Me</div>
+   
+    <script>
+		function mOver(obj){
+            obj.style.backgroundColor = "red";
+            obj.innerHTML="Release Me"
+           
+		}
+        function mOut(obj){
+            obj.style.backgroundColor = "yellow";
+            obj.innerHTML="Click Me"
+           
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First</title>
+	<script>
+		function pranit(){
+            var x = document.getElementById("firstname").value;
+            if(x == ""){
+            alert("please fill the firstname")
+            }
+            else{
+                alert("please fill the lastname")
+            }
+		}
+	</script>
+</head>
+<body>
+    FirstName:<input type="text" onblur="pranit()" id="firstname"><br/>
+    LastName:<input type="text"><br/>
+    <input type="button" onclick="pranit()" value="button">
+   
+
+</body>
+</html>
