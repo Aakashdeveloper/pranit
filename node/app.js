@@ -9,7 +9,7 @@ app.set('view engine','ejs');
 
 
 app.get('/',function(req,res){
-    res.render('index')
+    res.render('index',{list:['Home ','About'],title:"node App"})
 });
 
 app.get('/about',function(req,res){

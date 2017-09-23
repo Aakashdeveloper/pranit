@@ -1,9 +1,14 @@
 <html>
     <head>
-        <title>Node app</title>
+        <title><%=title %></title>
     </head>
     <body>
         <h1>This is home page</h1>
+        <ul>
+        <% for (var i=0; i<list.length;i++){%>
+            <li><%=list[i]%></li>
+        <%}%>
+        </ul>
     </body>
 
 </html>
