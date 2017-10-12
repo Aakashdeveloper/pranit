@@ -1,9 +1,9 @@
 var express = require('express');
 
 var app= express();
-var bookRouter = require('./src/routes/bookRoutes');
 
-var port = 3000;
+
+var port = 3600;
 app.use(express.static('public'));
 app.set('views','./src/views');
 app.set('view engine','ejs');
@@ -14,6 +14,9 @@ var navbar = [
     {link:'/authors',name:'Authors'},
     {link:'/contact',name:'Contact'}
 ]
+
+
+var bookRouter = require('./src/routes/bookRoutes')(navbar);
 
 
 
@@ -27,6 +30,6 @@ app.listen(port, function(err){
     if(err){
         console.log("server not running");
     }else{
-        console.log("running on port 3000");
+        console.log("running on port 3600");
     }
 });
